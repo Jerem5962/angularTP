@@ -31,11 +31,11 @@ export class AppComponent {
     {name: 'noemie', grade: 18},
     {name: 'gerard', grade: 5},
     {name: 'thomas', grade: 10}
-  ]
+  ];
 
   // Méthodes
   constructor() {
-    console.log("constructeur activé!")
+    console.log("constructeur activé!");
     //setTimeout(() => this.updatUI(), 3000)
 
   }

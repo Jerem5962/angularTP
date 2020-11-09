@@ -1,0 +1,5 @@
+<button
+  [ngStyle]="{'background-color': button.on === true ? button.color : button.color}"
+  (click)="turn()"
+    ><span>{{button.text}}</span>
+</button>

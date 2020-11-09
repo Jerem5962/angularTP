@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component} from '@angular/core';
 
 const COUNTER_INIT_VALUE: number = 0;
 
@@ -14,8 +14,7 @@ export class CounterComponent {
 
   increment = () => {
     this.count++;
-
-    if (this.count > 20) this.count = COUNTER_INIT_VALUE;
+    if (this.count > 20) { this.count = COUNTER_INIT_VALUE; }
 
   }
 
