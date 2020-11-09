@@ -18,13 +18,13 @@ interface Student {
 
 export class AppComponent {
   // proprietés
-  title: string = "App Component";
-  paragrapheText: string = "Simple paragraphe";
+  title = 'App Component';
+  paragrapheText = 'Simple paragraphe';
   image: Image = {
-    'src': "https://tse4.mm.bing.net/th?id=OIP.mOyJeMCn3CQWmysCkOAX7QHaE8&pid=Api&P=0&w=239&h=160",
-    'alt': "loups"
+    src: 'https://tse4.mm.bing.net/th?id=OIP.mOyJeMCn3CQWmysCkOAX7QHaE8&pid=Api&P=0&w=239&h=160',
+    alt: 'loups'
   };
-  color: string = "orange";
+  color = 'orange';
 
   students: string[] = ['gerard', 'rudy', 'andre'];
   students2: Student[] = [
@@ -35,13 +35,14 @@ export class AppComponent {
 
   // Méthodes
   constructor() {
-    console.log("constructeur activé!");
-    //setTimeout(() => this.updatUI(), 3000)
+    console.log('constructeur activé!');
+    // setTimeout(() => this.updatUI(), 3000)
 
   }
 
-  updatUI () {
-    this.title += " updated !";
-    this.image.src = "https://tse2.mm.bing.net/th?id=OIP.ELKEUyiT1r7FPI9viXNZ-AHaE8&pid=Api&P=0&w=239&h=160"
+  // tslint:disable-next-line:typedef
+  updatUI() {
+    this.title += ' updated !';
+    this.image.src = 'https://tse2.mm.bing.net/th?id=OIP.ELKEUyiT1r7FPI9viXNZ-AHaE8&pid=Api&P=0&w=239&h=160';
   }
 }
