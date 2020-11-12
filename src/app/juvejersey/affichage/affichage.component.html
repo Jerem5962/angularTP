@@ -1,0 +1,12 @@
+<h2>TP juvejersey</h2>
+<div id="app">
+  <div id="settingArea">
+    <h2>Juventus Home Authentic Jersey 2020/21</h2>
+    <app-flocker [images]="images"></app-flocker>
+    <app-badge [badges]="badges"></app-badge>
+    <app-quantity (qty)="qtyBadgeParent($event)"></app-quantity>
+    <app-total
+      [price]="price"
+      [qty]="qtyBadge"></app-total>
+  </div>
+</div>

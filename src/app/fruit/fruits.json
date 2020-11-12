@@ -1,0 +1,24 @@
+{
+  "fruits": [
+    {
+      "id": 1,
+      "name": "péche",
+      "like": 50
+    },
+    {
+      "id": 2,
+      "name": "abricot",
+      "like": 13
+    },
+    {
+      "id": 3,
+      "name": "coco",
+      "like": 26
+    },
+    {
+      "name": "Orange",
+      "like": 0,
+      "id": 4
+    }
+  ]
+}

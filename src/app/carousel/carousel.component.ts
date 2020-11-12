@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-import {count} from 'rxjs/operators';
-import {countOccurrences} from '@angular-devkit/build-angular/plugins/webpack/analytics';
+import { Component, OnInit } from '@angular/core';
 
 interface Image {
   src: string;
@@ -12,10 +10,10 @@ interface Image {
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css']
 })
-export class CarouselComponent {
+export class CarouselComponent implements OnInit{
   images: Image[] = [
     {
-      src: 'https://tse2.mm.bing.net/th?id=OIP.Hmrt6xzLibWaLdUefTnEWQHaDU&pid=Api&P=0&w=388&h=175',
+      src: 'https://tse2.mm.bing.net/th?id=OIP.Hmrt6xzLibWaLdUefTnEWQHaDU&pid=Api&P=0&w=388&h=189',
       alt: 'bateau'
     },
     {
@@ -36,28 +34,36 @@ export class CarouselComponent {
     }
   ];
   value = 0;
+  count = this.images.length;
 
   image: Image = {
     src: this.images[this.value].src,
     alt: this.images[this.value].alt
   };
 
-  constructor() {
-    setTimeout(() => {
-      this.updateImg();
-      this.value++;
-    }, 3000
-    );
-  }
+  constructor() {}
 
+  ngOnInit(): void {
+    this.upgradeImg();
+  }
   // tslint:disable-next-line:typedef
-  updateImg() {
-    for (const image of this.images) {
-      setTimeout(() => {
-        this.image.src = image.src;
-        this.image.alt = image.alt;
-        console.log();
-      }, 3000);
-    }
+  imageDown() {
+    this.value === 0 ? this.value = 4 : this.value--;
+    this.image.src = this.images[this.value].src;
+    this.image.alt = this.images[this.value].alt;
+  }
+  // tslint:disable-next-line:typedef
+  imageUp(){
+    this.value === 4 ? this.value = 0 : this.value++;
+    this.image.src = this.images[this.value].src;
+    this.image.alt = this.images[this.value].alt;
+  }
+  // tslint:disable-next-line:typedef
+  upgradeImg(){
+    setInterval(() => {
+      this.image.src = this.images[this.value].src;
+      this.image.alt = this.images[this.value].alt;
+      if (this.value === 4) { this.value = 0; } this.value++;
+    }, 5000);
   }
 }

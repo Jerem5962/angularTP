@@ -1,0 +1,19 @@
+<section>
+  <h3>Badges</h3>
+  <div id="badges">
+    <img
+      *ngFor="let badge of badges"
+      [src]="badge.src" alt="">
+  </div>
+  <div id="badgesSelector">
+    <input
+      (click)="viewBadge($event)"
+      *ngFor="let badge of badges; let i=index"
+      type="checkbox"
+      [value]="i"
+    />
+  </div>
+  <div>
+    <p>{{totalPrice}} €</p>
+  </div>
+</section>

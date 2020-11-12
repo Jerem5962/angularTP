@@ -1,0 +1,12 @@
+<p>player-form works!</p>
+
+<div>
+  <input (keyup)="onKeyupLastname($event)" type="text" placeholder="Entre le nom">
+  <input (keyup)="onKeyupFirstname($event)" type="text" placeholder="Entre le prenom">
+  <input (keyup)="onKeyupAge($event)" type="number" placeholder="Entre l'age">
+  <input (keyup)="onKeyupPosition($event)" type="text" placeholder="Entre le poste">
+  <input (keyup)="onKeyupEquipe($event)" type="number" placeholder="Entre le numero d'équipe">
+  <button
+    (click)="save()"
+  >Enregistrer</button>
+</div>

@@ -1,35 +1,54 @@
 <h1>{{ title }}</h1>
 
-<!--- Propertie binding-->
-<p [innerText] = "paragrapheText"></p>
+<app-player-list></app-player-list>
+<!--<fruit-main></fruit-main>-->
+<!--<div>-->
+<!--  <app-affichage-->
+<!--    [price]="price"-->
+<!--    [badges]="badges"-->
+<!--    [images]="images"-->
+<!--  ></app-affichage>-->
+<!--</div>-->
 
-<!--- Sans binding
-<img src="https://tse4.mm.bing.net/th?id=OIP.mOyJeMCn3CQWmysCkOAX7QHaE8&pid=Api&P=0&w=239&h=160" alt="loups">
--->
+<!--<div>-->
+<!--  &lt;!&ndash;- Propertie binding&ndash;&gt;-->
+<!--  <p [innerText] = "paragrapheText"></p>-->
 
-<!--- Propertie binding-->
-<img [src]="image.src" [alt]="image.alt">
+<!--  &lt;!&ndash;- Sans binding-->
+<!--  <img src="https://tse4.mm.bing.net/th?id=OIP.mOyJeMCn3CQWmysCkOAX7QHaE8&pid=Api&P=0&w=239&h=160" alt="loups">-->
+<!--  &ndash;&gt;-->
 
-<!--- Event binding-->
-<button (click)="updatUI()">Update UI</button>
+<!--  &lt;!&ndash;- Propertie binding&ndash;&gt;-->
+<!--  <img [src]="image.src">-->
 
-<!-- Inseertion d'un composant enfant. (child component)-->
-<app-counter></app-counter>
+<!--  &lt;!&ndash;- Event binding&ndash;&gt;-->
+<!--  <button (click)="updatUI()">Update UI</button>-->
 
-<!-- Utilisation de la directive *ngFor-->
-<p *ngFor="let student of students">{{ student }}</p>
+<!--  &lt;!&ndash; Inseertion d'un composant enfant. (child component)&ndash;&gt;-->
+<!--  <app-counter></app-counter>-->
 
-<ul>
-  <li
-    [ngStyle]="{'color': student.grade > 14 ? 'green' : 'red' }"
-    *ngFor="let student of students2">
-      {{ student.name }}
-    <span
-      *ngIf="student.grade > 14">
-      (bon élève)
-    </span>
-  </li>
-</ul>
+<!--  &lt;!&ndash; Utilisation de la directive *ngFor&ndash;&gt;-->
+<!--  <p *ngFor="let student of students">{{ student }}</p>-->
 
-<app-button-on-off></app-button-on-off>
-<app-carousel></app-carousel>
+<!--  <ul>-->
+<!--    <li-->
+<!--      [ngStyle]="{'color': student.grade > 14 ? 'green' : 'red' }"-->
+<!--      *ngFor="let student of students2">-->
+<!--      {{ student.name }}-->
+<!--      <span-->
+<!--        *ngIf="student.grade > 14">-->
+<!--      (bon élève)-->
+<!--    </span>-->
+<!--    </li>-->
+<!--  </ul>-->
+<!--</div>-->
+
+
+<!--<app-button-on-off></app-button-on-off>-->
+<!--<app-carousel></app-carousel>-->
+<!--<app-article-list-->
+<!--  [articles]="articles"-->
+<!--  (change)="computeTotal()">-->
+<!--</app-article-list>-->
+
+<!--<app-article-order></app-article-order>-->

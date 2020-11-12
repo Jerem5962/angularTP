@@ -1,0 +1,9 @@
+<p>Liste des fruits</p>
+<!-- formulaire d'ajout de fruit -->
+<div>
+  <input (keyup)="onKeyup($event)" type="text" placeholder="Nom du fruit" />
+  <button (click)="save()">Enregistrer</button>
+</div>
+<p *ngFor="let fruit of fruits">
+  {{fruit.name}} ({{ fruit.like }} likes)
+</p>

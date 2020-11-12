@@ -1,0 +1,26 @@
+<section>
+  <div *ngFor="let player of players; let i=index">
+    <div>
+      <p>
+        {{ player.firstname }} {{player.lastname}} <span>{{player.age}} ans. </span>
+        {{player.position}} {{player.teamid}}
+      </p>
+    </div>
+    <div>
+      <button (click)="modify(player)">Modifier</button>
+      <button (click)="delete()">Supprimer</button>
+    </div>
+    <div *ngIf="hidden">
+      <app-player-form></app-player-form>
+    </div>
+
+  </div>
+
+</section>
+<section>
+  <div>
+    <app-player-form></app-player-form>
+  </div>
+</section>
+
+

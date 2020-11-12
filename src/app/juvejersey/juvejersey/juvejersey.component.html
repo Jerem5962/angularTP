@@ -1,0 +1,9 @@
+<div id="photoArea">
+  <img src="{{flocker ? 'assets/images/3.jpg':image}}" />
+  <div id="thumbs">
+    <img
+      *ngFor=" let image of images"
+      (click)="viewImage($event)" src="assets/images/{{image.src}}" />
+  </div>
+</div>
+

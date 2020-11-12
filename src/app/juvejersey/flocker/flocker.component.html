@@ -1,0 +1,9 @@
+<app-juvejersey
+  [images]="images"
+  [flocker]="flocker"
+></app-juvejersey>
+<section>
+  <h3>Flocking</h3>
+  <button (click)="isSelected($event, false)" class="flock {{activeFlock}}" id="flock"><span>No flock</span></button>
+  <button (click)="isSelected($event, true)" class="flock {{activePlayer}}" id="players"><span>Players</span></button>
+</section>

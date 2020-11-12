@@ -1,0 +1,11 @@
+<h2>Articles</h2>
+<article *ngFor="let article of articles">
+  <h3>{{article.name}}</h3>
+  <span>{{article.price}} €</span>
+  <select (change)="onChange($event, article.price)">
+    <option value="">Quantité</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </select>
+</article>
